@@ -1,349 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UnknownSoul | Business</title>
-
+<title>SD24 Online Shop</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #071326;
-  color: white;
-  line-height: 1.6;
-}
-
-header {
-  background: #0b1c35;
-  padding: 18px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #19365b;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #38bdf8;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 22px;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-.hero {
-  min-height: 570px;
-  padding: 100px 8%;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 80% 40%, #164e83 0%, transparent 35%),
-    linear-gradient(135deg, #071326, #102d50);
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-.hero small {
-  color: #38bdf8;
-  letter-spacing: 3px;
-  font-weight: bold;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 7vw, 72px);
-  line-height: 1.1;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  color: #38bdf8;
-}
-
-.hero p {
-  color: #c3d4e8;
-  font-size: 17px;
-  margin-bottom: 30px;
-  max-width: 570px;
-}
-
-.btn {
-  display: inline-block;
-  background: #0284c7;
-  color: white;
-  text-decoration: none;
-  padding: 13px 27px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #38bdf8;
-  color: #071326;
-  transform: translateY(-3px);
-}
-
-section {
-  padding: 80px 8%;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: 36px;
-  color: #38bdf8;
-}
-
-.section-title p {
-  color: #a9bfd8;
-}
-
-.about {
-  background: #0b1c35;
-  text-align: center;
-}
-
-.about-text {
-  max-width: 750px;
-  margin: auto;
-  color: #c3d4e8;
-  font-size: 17px;
-}
-
-.services {
-  background: #071326;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: #102541;
-  padding: 30px;
-  border: 1px solid #1d426b;
-  border-radius: 14px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: #38bdf8;
-}
-
-.card .icon {
-  font-size: 35px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  color: #38bdf8;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #b7c9dd;
-}
-
-.why {
-  background: #0b1c35;
-  text-align: center;
-}
-
-.why p {
-  max-width: 650px;
-  margin: auto;
-  color: #c3d4e8;
-}
-
-.contact {
-  text-align: center;
-  background: linear-gradient(135deg, #102d50, #071326);
-}
-
-.contact p {
-  color: #c3d4e8;
-  margin: 12px 0 25px;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #050d19;
-  color: #8fa8c3;
-}
-
-footer span {
-  color: #38bdf8;
-}
-
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 13px;
-  }
-
-  nav a {
-    margin: 0;
-  }
-
-  .hero {
-    min-height: 480px;
-    padding: 75px 7%;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 60px 7%;
-  }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#222}
+header{background:#102b55;color:white;text-align:center;padding:25px}
+header h1{margin:0;font-size:32px}
+nav{background:#173d70;padding:12px;text-align:center}
+nav a{color:white;margin:10px;text-decoration:none}
+.container{padding:18px;max-width:1100px;margin:auto}
+.hero{background:#dceaff;padding:25px;text-align:center;border-radius:12px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
+.card{background:white;padding:15px;border-radius:12px;text-align:center;box-shadow:0 2px 8px #ddd}
+.pic{font-size:45px;background:#eef4ff;padding:15px;border-radius:10px}
+button{background:#1264c0;color:white;border:0;padding:11px;border-radius:7px;cursor:pointer;margin:5px}
+input,textarea,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:7px}
+.cart{background:white;padding:18px;border-radius:12px;margin-top:25px}
+.price{color:#087b38;font-weight:bold}
+footer{background:#102b55;color:white;text-align:center;padding:20px;margin-top:30px}
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">UnknownSoul.</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>SD24</h1>
+<p>YOUR TRUSTED ONLINE SHOP</p>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <small>WELCOME TO UNKNOWNSOUL</small>
-    <h1>Build Your <span>Dream</span><br>With Us.</h1>
-    <p>
-      Welcome to UnknownSoul. We believe in creativity,
-      quality and building a better future through
-      smart business solutions.
-    </p>
-    <a href="#contact" class="btn">Get In Touch →</a>
-  </div>
-</section>
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#cart">My Cart</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<section class="about" id="about">
-  <div class="section-title">
-    <h2>About Us</h2>
-    <p>Discover the world of UnknownSoul</p>
-  </div>
-  <p class="about-text">
-    UnknownSoul is a modern business brand focused on
-    creativity, innovation and quality. Our mission is
-    to provide smart solutions, build trust and create
-    meaningful experiences for our customers.
-  </p>
-</section>
+<div class="container" id="home">
+<div class="hero">
+<h2>Welcome to SD24 Online Shop</h2>
+<p>আপনার পছন্দের সব পণ্য এক জায়গায়!</p>
+<p>সাশ্রয়ী দামে কেনাকাটা করুন।</p>
+</div>
 
-<section class="services" id="services">
-  <div class="section-title">
-    <h2>Our Services</h2>
-    <p>What we can offer you</p>
-  </div>
+<h2 id="products">Our Products</h2>
+<div class="products" id="productList"></div>
 
-  <div class="cards">
-    <div class="card">
-      <div class="icon">💡</div>
-      <h3>Creative Ideas</h3>
-      <p>Fresh ideas and innovative solutions
-      to help your business grow.</p>
-    </div>
+<div class="cart" id="cart">
+<h2>🛒 My Shopping Cart</h2>
+<div id="cartItems">আপনার কার্ট খালি।</div>
+<h3>মোট: ৳<span id="total">0</span></h3>
+<button onclick="showCheckout()">Checkout করুন</button>
+</div>
 
-    <div class="card">
-      <div class="icon">💻</div>
-      <h3>Digital Solutions</h3>
-      <p>Modern digital experiences designed
-      for your business needs.</p>
-    </div>
+<div class="cart" id="checkout" style="display:none">
+<h2>অর্ডারের তথ্য দিন</h2>
+<form id="orderForm">
+<input id="customer" placeholder="আপনার নাম" required>
+<input id="phone" type="tel" placeholder="মোবাইল নম্বর" required>
+<textarea id="address" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা" required></textarea>
+<select id="payment">
+<option>Cash on Delivery</option>
+<option>bKash (পেমেন্টের পর WhatsApp-এ জানান)</option>
+<option>Nagad (পেমেন্টের পর WhatsApp-এ জানান)</option>
+</select>
+<button type="submit">WhatsApp-এ অর্ডার পাঠান</button>
+</form>
+</div>
 
-    <div class="card">
-      <div class="icon">🤝</div>
-      <h3>Customer Support</h3>
-      <p>We value relationships and believe
-      in building lasting trust.</p>
-    </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="section-title">
-    <h2>Why Choose Us?</h2>
-  </div>
-  <p>
-    Creativity, dedication and quality are at the heart
-    of UnknownSoul. We believe every great journey starts
-    with a simple idea and the courage to make it real.
-  </p>
-</section>
-
-<section class="contact" id="contact">
-  <div class="section-title">
-    <h2>Let's Connect</h2>
-    <p>Have a project or business idea?</p>
-  </div>
-  <p>We would love to hear from you.</p>
-  <a href="mailto:your@email.com" class="btn">
-    Contact Us →
-  </a>
-</section>
+<div id="contact">
+<h2>Contact Us</h2>
+<p>WhatsApp: 01814759666</p>
+<a href="https://wa.me/8801814759666">
+<button>Chat on WhatsApp</button>
+</a>
+</div>
+</div>
 
 <footer>
-  <p>© 2026 <span>UnknownSoul</span>. All Rights Reserved.</p>
-  <p>Designed with ❤️ by UnknownSoul</p>
+<p>© 2026 SD24 Online Shop</p>
+<p>Thank you for shopping with us!</p>
 </footer>
-<!DOCTYPE html>
-<html>
-<head>
-<title>UnknownSoul</title>
-</head>
-<body>
-<h1>Welcome to UnknownSoul</h1>
-<p>Welcome to my website!</p>
 
-<a href="https://wa.me/8801814759666"
-style="background:#25D366;color:white;padding:12px 20px;text-decoration:none;border-radius:20px;">
-💬 Chat on WhatsApp
-</a>
+<script>
+const products=[
+{id:1,name:"Fashion T-Shirt",price:450,icon:"👕"},
+{id:2,name:"Stylish Shoes",price:1200,icon:"👟"},
+{id:3,name:"Wrist Watch",price:850,icon:"⌚"},
+{id:4,name:"Mobile Accessories",price:350,icon:"📱"},
+{id:5,name:"Cosmetics",price:550,icon:"💄"},
+{id:6,name:"Home Products",price:400,icon:"🏠"},
+{id:7,name:"Sunglasses",price:300,icon:"🕶️"},
+{id:8,name:"Ladies Bag",price:750,icon:"👜"}
+];
 
-</body>
-</html>
+let cart=[];
+
+function showProducts(){
+document.getElementById("productList").innerHTML=products.map(p=>`
+<div class="card">
+<div class="pic">${p.icon}</div>
+<h3>${p.name}</h3>
+<p class="price">৳${p.price}</p>
+<button onclick="addToCart(${p.id})">Add to Cart</button>
+</div>`).join("");
+}
+
+function addToCart(id){
+let item=cart.find(x=>x.id===id);
+if(item)item.qty++;
+else cart.push({...products.find(x=>x.id===id),qty:1});
+showCart();
+}
+
+function showCart(){
+let area=document.getElementById("cartItems");
+if(cart.length===0){
+area.innerHTML="আপনার কার্ট খালি।";
+}else{
+area.innerHTML=cart.map(p=>`
+<p>${p.name} × ${p.qty} — ৳${p.price*p.qty}
+<button onclick="removeItem(${p.id})">Remove</button></p>
+`).join("");
+}
+document.getElementById("total").innerText=
+cart.reduce((s,p)=>s+p.price*p.qty,0);
+}
+
+function removeItem(id){
+cart=cart.filter(p=>p.id!==id);
+showCart();
+}
+
+function showCheckout(){
+if(cart.length===0){
+alert("আগে পণ্য Add to Cart করুন");
+return;
+}
+document.getElementById("checkout").style.display="block";
+document.getElementById("checkout").scrollIntoView({behavior:"smooth"});
+}
+
+document.getElementById("orderForm").addEventListener("submit",function(e){
+e.preventDefault();
+if(cart.length===0){alert("কার্ট খালি");return;}
+
+let message="SD24 ONLINE SHOP - NEW ORDER\n\n";
+message+="নাম: "+document.getElementById("customer").value+"\n";
+message+="মোবাইল: "+document.getElementById("phone").value+"\n";
+message+="ঠিকানা: "+document.getElementById("address").value+"\n";
+message+="পেমেন্ট: "+document.getElementById("payment").value+"\n\n";
+message+="পণ্যের তালিকা:\n";
+cart.forEach(p=>{
+message+=p.name+" x "+p.qty+" = Tk "+(p.price*p.qty)+"\n";
+});
+message+="\nমোট: Tk "+cart.reduce((s,p)=>s+p.price*p.qty,0);
+
+window.location.href="https://wa.me/8801814759666?text="+encodeURIComponent(message);
+});
+
+showProducts();
+showCart();
+</script>
 </body>
 </html>
