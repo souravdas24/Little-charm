@@ -1,171 +1,82 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SD24 Online Shop</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#222}
-header{background:#102b55;color:white;text-align:center;padding:25px}
-header h1{margin:0;font-size:32px}
-nav{background:#173d70;padding:12px;text-align:center}
-nav a{color:white;margin:10px;text-decoration:none}
-.container{padding:18px;max-width:1100px;margin:auto}
-.hero{background:#dceaff;padding:25px;text-align:center;border-radius:12px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
-.card{background:white;padding:15px;border-radius:12px;text-align:center;box-shadow:0 2px 8px #ddd}
-.pic{font-size:45px;background:#eef4ff;padding:15px;border-radius:10px}
-button{background:#1264c0;color:white;border:0;padding:11px;border-radius:7px;cursor:pointer;margin:5px}
-input,textarea,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:7px}
-.cart{background:white;padding:18px;border-radius:12px;margin-top:25px}
-.price{color:#087b38;font-weight:bold}
-footer{background:#102b55;color:white;text-align:center;padding:20px;margin-top:30px}
+body{margin:0;background:#101014;color:white;font-family:Arial,sans-serif}
+header{background:#191920;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:bold;color:#ff3d91}
+nav a{color:white;text-decoration:none;margin:8px}
+.hero{text-align:center;padding:75px 15px;background:linear-gradient(135deg,#260b24,#101014,#35102b)}
+.hero h1{font-size:42px;margin:10px;color:#ff4b9a}
+.hero p{color:#ddd;font-size:17px}
+.btn{display:inline-block;background:#ff3d91;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;border:0;cursor:pointer}
+section{padding:35px 6%}
+h2{text-align:center;color:#ff4b9a}
+.categories,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
+.item{background:#202027;padding:20px;border-radius:12px;text-align:center}
+.product{background:#202027;border-radius:12px;padding:18px;text-align:center}
+.product h3{color:#ff72ae}
+.price{color:#ff72ae;font-weight:bold}
+button{background:#ff3d91;color:white;border:0;padding:10px 16px;border-radius:20px;cursor:pointer}
+footer{text-align:center;background:#191920;padding:25px;color:#ccc}
+input,textarea,select{width:100%;padding:12px;margin:8px 0;border-radius:7px;border:0}
 </style>
 </head>
 <body>
-
 <header>
-<h1>SD24</h1>
-<p>YOUR TRUSTED ONLINE SHOP</p>
-</header>
-
+<div class="logo">SD24 ONLINE SHOP</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#products">Products</a>
-<a href="#cart">My Cart</a>
 <a href="#contact">Contact</a>
 </nav>
+</header>
 
-<div class="container" id="home">
-<div class="hero">
-<h2>Welcome to SD24 Online Shop</h2>
-<p>আপনার পছন্দের সব পণ্য এক জায়গায়!</p>
-<p>সাশ্রয়ী দামে কেনাকাটা করুন।</p>
+<div class="hero" id="home">
+<h1>WELCOME TO SD24</h1>
+<p>Your Favourite Online Shopping Destination</p>
+<p>Buy Smart • Shop Easy • Live Better</p>
+<a class="btn" href="#products">Shop Now</a>
 </div>
 
-<h2 id="products">Our Products</h2>
-<div class="products" id="productList"></div>
-
-<div class="cart" id="cart">
-<h2>🛒 My Shopping Cart</h2>
-<div id="cartItems">আপনার কার্ট খালি।</div>
-<h3>মোট: ৳<span id="total">0</span></h3>
-<button onclick="showCheckout()">Checkout করুন</button>
+<section>
+<h2>Our Categories</h2>
+<div class="categories">
+<div class="item">👕<h3>Fashion</h3></div>
+<div class="item">📱<h3>Electronics</h3></div>
+<div class="item">🏠<h3>Home & Living</h3></div>
+<div class="item">💄<h3>Beauty</h3></div>
+<div class="item">🎁<h3>Gift Items</h3></div>
+<div class="item">🛍️<h3>Others</h3></div>
 </div>
+</section>
 
-<div class="cart" id="checkout" style="display:none">
-<h2>অর্ডারের তথ্য দিন</h2>
-<form id="orderForm">
-<input id="customer" placeholder="আপনার নাম" required>
-<input id="phone" type="tel" placeholder="মোবাইল নম্বর" required>
-<textarea id="address" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা" required></textarea>
-<select id="payment">
-<option>Cash on Delivery</option>
-<option>bKash (পেমেন্টের পর WhatsApp-এ জানান)</option>
-<option>Nagad (পেমেন্টের পর WhatsApp-এ জানান)</option>
-</select>
-<button type="submit">WhatsApp-এ অর্ডার পাঠান</button>
-</form>
+<section id="products">
+<h2>Our Products</h2>
+<p style="text-align:center;color:#ccc">আপনার পণ্যের ছবি, নাম ও দাম এখানে যোগ করুন।</p>
+<div class="products">
+<div class="product"><h3>Product 1</h3><p>Quality Product</p><p class="price">Price: Contact us</p><a class="btn" href="https://wa.me/8801814759666?text=I%20want%20to%20order%20Product%201">Order Now</a></div>
+<div class="product"><h3>Product 2</h3><p>Quality Product</p><p class="price">Price: Contact us</p><a class="btn" href="https://wa.me/8801814759666?text=I%20want%20to%20order%20Product%202">Order Now</a></div>
+<div class="product"><h3>Product 3</h3><p>Quality Product</p><p class="price">Price: Contact us</p><a class="btn" href="https://wa.me/8801814759666?text=I%20want%20to%20order%20Product%203">Order Now</a></div>
 </div>
+</section>
 
-<div id="contact">
+<section id="contact">
 <h2>Contact Us</h2>
+<div style="max-width:450px;margin:auto;text-align:center">
 <p>WhatsApp: 01814759666</p>
-<a href="https://wa.me/8801814759666">
-<button>Chat on WhatsApp</button>
-</a>
+<a class="btn" href="https://wa.me/8801814759666">Chat on WhatsApp</a>
+<p><a href="https://www.instagram.com/sd24_online_shop/" style="color:#ff72ae">Follow us on Instagram</a></p>
 </div>
-</div>
-<a href="https://www.instagram.com/sd24_online_shop/"
-target="_blank"
-style="display:inline-block;background:#E1306C;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;">
-📸 Follow us on Instagram
-</a>
+</section>
+
 <footer>
-<p>© 2026 SD24 Online Shop</p>
-<p>Thank you for shopping with us!</p>
+<p>© 2026 SD24 Online Shop. All Rights Reserved.</p>
+<p>Thank you for shopping with us ❤️</p>
 </footer>
-
-<script>
-const products=[
-{id:1,name:"Fashion T-Shirt",price:450,icon:"👕"},
-{id:2,name:"Stylish Shoes",price:1200,icon:"👟"},
-{id:3,name:"Wrist Watch",price:850,icon:"⌚"},
-{id:4,name:"Mobile Accessories",price:350,icon:"📱"},
-{id:5,name:"Cosmetics",price:550,icon:"💄"},
-{id:6,name:"Home Products",price:400,icon:"🏠"},
-{id:7,name:"Sunglasses",price:300,icon:"🕶️"},
-{id:8,name:"Ladies Bag",price:750,icon:"👜"}
-];
-
-let cart=[];
-
-function showProducts(){
-document.getElementById("productList").innerHTML=products.map(p=>`
-<div class="card">
-<div class="pic">${p.icon}</div>
-<h3>${p.name}</h3>
-<p class="price">৳${p.price}</p>
-<button onclick="addToCart(${p.id})">Add to Cart</button>
-</div>`).join("");
-}
-
-function addToCart(id){
-let item=cart.find(x=>x.id===id);
-if(item)item.qty++;
-else cart.push({...products.find(x=>x.id===id),qty:1});
-showCart();
-}
-
-function showCart(){
-let area=document.getElementById("cartItems");
-if(cart.length===0){
-area.innerHTML="আপনার কার্ট খালি।";
-}else{
-area.innerHTML=cart.map(p=>`
-<p>${p.name} × ${p.qty} — ৳${p.price*p.qty}
-<button onclick="removeItem(${p.id})">Remove</button></p>
-`).join("");
-}
-document.getElementById("total").innerText=
-cart.reduce((s,p)=>s+p.price*p.qty,0);
-}
-
-function removeItem(id){
-cart=cart.filter(p=>p.id!==id);
-showCart();
-}
-
-function showCheckout(){
-if(cart.length===0){
-alert("আগে পণ্য Add to Cart করুন");
-return;
-}
-document.getElementById("checkout").style.display="block";
-document.getElementById("checkout").scrollIntoView({behavior:"smooth"});
-}
-
-document.getElementById("orderForm").addEventListener("submit",function(e){
-e.preventDefault();
-if(cart.length===0){alert("কার্ট খালি");return;}
-
-let message="SD24 ONLINE SHOP - NEW ORDER\n\n";
-message+="নাম: "+document.getElementById("customer").value+"\n";
-message+="মোবাইল: "+document.getElementById("phone").value+"\n";
-message+="ঠিকানা: "+document.getElementById("address").value+"\n";
-message+="পেমেন্ট: "+document.getElementById("payment").value+"\n\n";
-message+="পণ্যের তালিকা:\n";
-cart.forEach(p=>{
-message+=p.name+" x "+p.qty+" = Tk "+(p.price*p.qty)+"\n";
-});
-message+="\nমোট: Tk "+cart.reduce((s,p)=>s+p.price*p.qty,0);
-
-window.location.href="https://wa.me/8801814759666?text="+encodeURIComponent(message);
-});
-
-showProducts();
-showCart();
-</script>
 </body>
 </html>
